@@ -6,7 +6,7 @@ import Product from './components/Product';
 import Team from './components/Team';
 import Official from './components/Official';
 import Profile from './components/My acount/Profile';
-import Footer from './components/Footer';
+import Footer from './components/Layout/Footer';
 import Registration from './components/Registration';
 import Login from './components/Login';
 import Withdraw from './components/Withdraw'; // Ensure Withdraw component is imported

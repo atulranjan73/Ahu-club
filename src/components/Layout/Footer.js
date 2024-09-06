@@ -1,14 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import homeIcon from '../assets/images/f_1g.png';
-import productIcon from '../assets/images/f_2.png';
-import teamIcon from '../assets/images/f_3.png';
-import officialIcon from '../assets/images/f_4.png';
-import myIcon from '../assets/images/f_5.png';
-import '../styles/css/layui.css';
-import '../styles/css/reset.css';
-import '../styles/css/style.css';
-import '../styles/css/swiper-bundle.min.css';
+import homeIcon from '../../assets/images/f_1g.png';
+import productIcon from '../../assets/images/f_2.png';
+import teamIcon from '../../assets/images/f_3.png';
+import officialIcon from '../../assets/images/f_4.png';
+import myIcon from '../../assets/images/f_5.png';
+import '../../styles/css/layui.css';
+import '../../styles/css/reset.css';
+import '../../styles/css/style.css';
+import '../../styles/css/swiper-bundle.min.css';
 
 const Footer = () => (
   <div className="foot">
