@@ -1,0 +1,57 @@
+.container {
+    background-color: #000080;
+    color: #ffffff;
+    font-family: sans-serif;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .wallet-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .wallet-balance {
+    text-align: center;
+  }
+  
+  .recharge-options {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .recharge-button {
+    background-color: #0080ff;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .recharge-form {
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 10px;
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .recharge-tips {
+    margin-top: 20px;
+  }
+  
+  .recharge-tips ul {
+    list-style: disc;
+    padding-left: 20px;
+  }
