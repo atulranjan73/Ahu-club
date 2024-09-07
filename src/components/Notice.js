@@ -33,6 +33,9 @@ const Notice = () => {
       <div className="swiper">
         <div className="swiper-wrapper">
           <div className="swiper-slide">User1234 09:15:30 Purchase $50 success</div>
+          <div className="swiper-slide">User1234 09:15:30 Purchase $50 success</div>
+          <div className="swiper-slide">User1234 09:15:30 Purchase $50 success</div>
+          <div className="swiper-slide">User1234 09:15:30 Purchase $50 success</div>
           <div className="swiper-slide">User5678 09:45:10 Purchase $75 success</div>
           <div className="swiper-slide">User9101 10:05:25 Purchase $30 success</div>
           <div className="swiper-slide">User1121 10:20:40 Purchase $100 success</div>
