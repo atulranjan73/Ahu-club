@@ -1,0 +1,21 @@
+/* src/styles/css/style.css */
+.foot ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+  }
+  
+  .foot ul li {
+    text-align: center;
+  }
+  
+  .foot ul li .cur {
+    color: #007bff; /* Change the color to indicate the active state */
+    font-weight: bold; /* Optionally make the active link bold */
+  }
+  
+  .foot ul li .cur img {
+    filter: brightness(1.2); /* Example: Make the icon slightly brighter */
+  }
+  

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../styles/Recharge.css"
+import "./../styles/Recharge.css";
 
 const Recharge = () => {
   const [amount, setAmount] = useState("");
@@ -21,7 +21,7 @@ const Recharge = () => {
   };
 
   return (
-    <div className="container">
+    <div className="recharge-container">
       <div className="wallet-header">
         <h1>MY WALLET</h1>
         <div className="wallet-balance">
@@ -79,11 +79,12 @@ const Recharge = () => {
         <ul>
           <li>Best recharge time: 6 am to 6 pm</li>
           <li>
-            Use Paytm, Upi the success rate is as high as 98%
+            Use Paytm, UPI for a higher success rate (up to 98%)
           </li>
         </ul>
       </div>
     </div>
   );
 };
-export default Recharge
+
+export default Recharge;

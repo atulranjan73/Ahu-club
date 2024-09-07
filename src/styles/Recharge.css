@@ -1,57 +1,100 @@
-.container {
-    background-color: #000080;
-    color: #ffffff;
-    font-family: sans-serif;
-    padding: 20px;
-    border-radius: 10px;
-  }
-  
-  .wallet-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-  }
-  
-  .wallet-balance {
-    text-align: center;
-  }
-  
-  .recharge-options {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
-  }
-  
-  .recharge-button {
-    background-color: #0080ff;
-    color: #ffffff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .recharge-form {
-    margin-bottom: 20px;
-  }
-  
-  .form-group {
-    margin-bottom: 10px;
-  }
-  
-  .form-control {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  .recharge-tips {
-    margin-top: 20px;
-  }
-  
-  .recharge-tips ul {
-    list-style: disc;
-    padding-left: 20px;
-  }
+/* src/styles/Recharge.css */
+
+.recharge-container {
+  background-color: #2222b6; /* Dark blue background */
+  color: #ffffff; /* White text color */
+  font-family: sans-serif;
+  padding: 30px;
+  border-radius: 10px;
+  margin-top: calc(5% + 70px); /* Reduced margin-top for less spacing */
+}
+
+.wallet-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.wallet-header h1 {
+color: white;
+}
+
+.wallet-balance {
+  text-align: center;
+}
+
+.wallet-balance p {
+  color: white;
+  margin: 5px 0;
+  font-size: 20px;
+}
+
+.wallet-balance p:first-child {
+  color: #ffffff; /* White for the balance amount */
+}
+
+.wallet-balance p:nth-child(2) {
+  color: #ffffff; /* Light gray for the wallet labels */
+  font-size: 16px;
+}
+
+.recharge-options {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.recharge-button {
+  background-color: #4caf50; /* Green background for better contrast */
+  color: #ffffff; /* White text color */
+  padding: 15px 30px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.recharge-button:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+
+.recharge-form {
+  margin-top: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+.form-group label{
+  color: #e0d9d9;
+}
+
+.form-control {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #ffffff; /* Light gray border for better visibility */
+  border-radius: 8px;
+  font-size: 16px;
+  background-color: #ffffff; /* White background for input fields */
+  color: #000000; /* Black text for better readability */
+}
+
+.recharge-tips {
+  margin-top: 20px;
+  color: #ffffff; /* Ensure the tips text is visible */
+}
+.recharge-tips h3 {
+  color: #e22828; /* Ensure the tips text is visible */
+}
+.recharge-tips {
+  margin-top: 20px;
+  color: #ffffff; /* Ensure the tips text is visible */
+}
+
+.recharge-tips ul {
+  list-style: disc;
+  padding-left: 20px;
+}

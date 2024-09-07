@@ -2,7 +2,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './components/Home';
-import Product from './components/Product';
+import Product from './components/Product/Product.jsx';
 import Team from './components/Team';
 import Official from './components/Official';
 import Profile from './components/My acount/Profile';
@@ -12,13 +12,16 @@ import Login from './components/Login';
 import Withdraw from './components/Withdraw'; // Ensure Withdraw component is imported
 import Recharge from './components/Recharge'; // Ensure Recharge component is imported
 import PrivateRoute from './components/PrivateRoute';
+import Header from './components/Layout/Header'
 import { AuthProvider } from './components/AuthContext';
 
 function App() {
   return (
     <AuthProvider>
+      <Header/>
       <Router>
         <div className="App">
+         
           <Routes>
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Registration />} />
