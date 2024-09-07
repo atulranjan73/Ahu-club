@@ -1,0 +1,45 @@
+/* Ensure the container takes up the necessary space */
+.home-notice {
+    position: relative;
+    width: 100%; /* Full width of the parent */
+    height: 60px; /* Set the height of the container */
+    overflow: hidden; 
+  }
+  
+  /* Center the swiper component */
+  .swiper {
+    width: 100%;
+    height: 50%; 
+    display: flex;
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+  }
+  
+  .swiper-wrapper {
+    display: flex;
+    flex-direction: column; /* Ensure slides are stacked vertically */
+    align-items: center; /* Center slides horizontally */
+    /* height: 100%;  */
+  }
+  
+  .swiper-slide {
+    display: flex;
+    align-items: center; /* Center text vertically within the slide */
+    justify-content: center; /* Center text horizontally within the slide */
+    width: 100%; /* Ensure slides take up full width of swiper container */
+    height: 80px; /* Match the height of the swiper container */
+    text-align: center; /* Center text horizontally */
+    padding: 0 10px; /* Optional: Add horizontal padding for spacing */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    font-size: 14px; /* Adjust font size if needed */
+  }
+  
+  /* Additional styling to ensure visibility and control */
+  .home-notice.hidden {
+    display: none;
+  }
+  
+  .home-notice.visible {
+    display: block;
+  }
+  

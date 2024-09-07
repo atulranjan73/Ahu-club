@@ -10,6 +10,7 @@ import Swiper from 'swiper/bundle';
 import iconWithdraw from '../assets/images/icon_4.png';
 import iconRecharge from '../assets/images/icon_5.png';
 import bannerBg from '../assets/images/banner-bg.png';
+import Notice from './Notice';
 
 function Home() {
     useEffect(() => {
@@ -21,7 +22,7 @@ function Home() {
                 clickable: true,
             },
         });
-    }, []);
+    }, [3000]);
 
     return (
         <div className="home-main">
@@ -67,6 +68,7 @@ function Home() {
                     </div>
                 </div>
             </div>
+            <Notice/>
 
             <div className="home-task">
                 <div className="home-task-tit">
