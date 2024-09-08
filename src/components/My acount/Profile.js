@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'; // Assuming you are using React Router
 import '../../styles/css/reset.css';
 import '../../styles/css/style.css';
 import '../../styles/css/layui.css';
@@ -25,148 +26,138 @@ import f3Img from '../../assets/images/f_3.png';
 import f4Img from '../../assets/images/f_4.png';
 import f5Img from '../../assets/images/f_5.png';
 
-function Profile() {
-  const handleServiceClose = () => {
-    const serviceBox = document.querySelector('.z-service');
-    if (serviceBox) {
-      serviceBox.classList.add('hide');
-    }
+const Profile = () => {
+  const [serviceVisible, setServiceVisible] = React.useState(false);
+
+  const handleServiceToggle = () => {
+    setServiceVisible(!serviceVisible);
   };
+
+  const incomeItems = [
+    'Withdraw Balance',
+    'Recharge Balance',
+    'Total Recharge',
+    'Total Withdraw',
+    'Total Assets',
+    'Total Income',
+    'Today Income',
+    'Team Income',
+    'TEAM B',
+    'TEAM C',
+    'TEAM D',
+  ];
+
+  const topNavItems = [
+    { img: m11Img, text: 'Deposit', link: './button/Deposit.jsx' },
+    { img: m10Img, text: 'Contract', link: './button/Contact.jsx' },
+    { img: m5Img, text: 'Bonus', link: './button/Bonus.jsx' },
+    { img: m6Img, text: 'About', link: './button/About.jsx' },
+    { img: m7Img, text: 'Password', link: './button/Password.jsx' },
+    { img: m9Img, text: 'Service', link: './button/Service.jsx' },
+    { img: m8Img, text: 'Download', link: './button/Download.jsx' },
+  ];
 
   return (
     <div className="bgColor">
-      <div className="top">
-        <div className="top-tit">My</div>
-      </div>
-      <div className="my-main">
-        <div className="my-top">
+      <header className="top">
+        <h1 className="top-tit">My</h1>
+      </header>
+
+      <main className="my-main">
+        <section className="my-top">
           <div className="my-top-left" id="avatar">
-            <img src={logoImg} alt="Avatar" />
+            <img src={logoImg} alt="User Avatar" />
           </div>
           <div className="my-top-right">
             <h3>ID : 164773</h3>
             <p>+917324086918</p>
             <p>
-              <i className="layui-icon layui-icon-star-fill"></i>
+              <i className="layui-icon layui-icon-star-fill" aria-hidden="true"></i>
             </p>
           </div>
-        </div>
-        <div className="my-income-tab">
-          <img src={bannerBgImg} alt="Banner" />
+        </section>
+
+        <section className="my-income-tab">
+          <img src={bannerBgImg} alt="Income Banner" />
           <div className="my-income-list">
-            {/* Income Items */}
-            {['Withdraw Balance', 'Recharge Balance', 'Total Recharge', 'Total Withdraw', 'Total Assets', 'Total Income', 'Today Income', 'Team Income', 'TEAM B', 'TEAM C', 'TEAM D'].map((item, index) => (
-              <div className="my-income-item" key={index}>
-                <h3>₹ 0</h3>
-                <p>{item}</p>
-              </div>
+            {incomeItems.map((item, index) => (
+              <IncomeItem key={index} label={item} />
             ))}
           </div>
-        </div>
-        <div className="my-income-nav">
+        </section>
+
+        <nav className="my-income-nav">
           <ul>
-            <li>
-              <a href="#">
-                <img src={m1Img} alt="Record" />
-                Record
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <img src={m2Img} alt="Account" />
-                Account
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <img src={m3Img} alt="Order" />
-                Order
-              </a>
-            </li>
+            <NavItem imgSrc={m1Img} label="Record" />
+            <NavItem imgSrc={m2Img} label="Account" />
+            <NavItem imgSrc={m3Img} label="Order" />
           </ul>
-        </div>
-        <div className="my-top-nav">
+        </nav>
+
+        <nav className="my-top-nav">
           <ul>
-            {[
-              { img: m11Img, text: 'Deposit', link: './button/Deposit.jsx' },
-              { img: m10Img, text: 'Contract', link: './button/Contact.jsx' },
-              { img: m5Img, text: 'Bonus', link: './button/Bonus.jsx' },
-              { img: m6Img, text: 'About', link: './button/About.jsx' },
-              { img: m7Img, text: 'Password', link: './button/Password.jsx' },
-              { img: m9Img, text: 'Service', link: './button/Service.jsx' },
-              { img: m8Img, text: 'Download', link: './button/Download.jsx' },
-            ].map((item, index) => (
-              <li key={index}>
-                <a href={item.link}>
-                  <img src={item.img} alt={item.text} />
-                  <p>{item.text}</p>
-                  <i className="layui-icon layui-icon-right" style={{ fontSize: '22px', color: '#333' }}></i>
-                </a>
-              </li>
+            {topNavItems.map((item, index) => (
+              <NavItem key={index} imgSrc={item.img} label={item.text} link={item.link} />
             ))}
           </ul>
-        </div>
+        </nav>
+
         <div className="my-top-out">
-          <a href="/login/">Logout</a>
+          <Link to="/login">Logout</Link>
         </div>
-      </div>
-      <div className="z-service hide">
-        <div className="service-box">
-          <h3>CUSTOMER SERVICE</h3>
-          <a href="https://wa.me/+918084661813" target="_blank" className="service-item" rel="noopener noreferrer">
-            <img src={s2Img} alt="WhatsApp Service" />
-            WHATSAPP SERVICE
-            <span>GO</span>
-          </a>
-          <a href="https://t.me/ag" target="_blank" className="service-item" rel="noopener noreferrer">
-            <img src={s1Img} alt="Telegram Service" />
-            TELEGRAM SERVICE
-            <span>GO</span>
-          </a>
-          <a href="https://t.me/agclub" target="_blank" className="service-item" rel="noopener noreferrer">
-            <img src={s2Img} alt="Official Channel" />
-            OFFICIAL CHANNEL
-            <span>GO</span>
-          </a>
-          <button type="button" className="service-close" onClick={handleServiceClose}>CLOSE</button>
-        </div>
-      </div>
-      <div className="foot">
-        <ul>
-          <li className="cur">
-            <a href="/index.html">
-              <img src={f1gImg} alt="Home" />
-              <p>Home</p>
-            </a>
-          </li>
-          <li>
-            <a href="/product/product_source/product.html">
-              <img src={f2Img} alt="Product" />
-              <p>Product</p>
-            </a>
-          </li>
-          <li>
-            <a href="/team/team_source/team.html">
-              <img src={f3Img} alt="Team" />
-              <p>Team</p>
-            </a>
-          </li>
-          <li>
-            <a href="/official/official_source/official.html">
-              <img src={f4Img} alt="Official" />
-              <p>Official</p>
-            </a>
-          </li>
-          <li>
-            <a href="/profile/profile_source/user.html">
-              <img src={f5Img} alt="My" />
-              <p>My</p>
-            </a>
-          </li>
-        </ul>
-      </div>
+      </main>
+
+      {serviceVisible && (
+        <CustomerService onClose={handleServiceToggle} />
+      )}
     </div>
   );
-}
+};
+
+const IncomeItem = ({ label }) => (
+  <div className="my-income-item">
+    <h3>₹ 0</h3>
+    <p>{label}</p>
+  </div>
+);
+
+const NavItem = ({ imgSrc, label, link = "#" }) => (
+  <li>
+    <a href={link}>
+      <img src={imgSrc} alt={label} />
+      <p>{label}</p>
+      <i className="layui-icon layui-icon-right" style={{ fontSize: '22px', color: '#333' }} aria-hidden="true"></i>
+    </a>
+  </li>
+);
+
+const FooterNavItem = ({ link, imgSrc, label }) => (
+  <li>
+    <Link to={link}>
+      <img src={imgSrc} alt={label} />
+      <p>{label}</p>
+    </Link>
+  </li>
+);
+
+const CustomerService = ({ onClose }) => (
+  <div className="z-service">
+    <div className="service-box">
+      <h3>CUSTOMER SERVICE</h3>
+      <ServiceLink href="https://wa.me/+918084661813" imgSrc={s2Img} label="WHATSAPP SERVICE" />
+      <ServiceLink href="https://t.me/ag" imgSrc={s1Img} label="TELEGRAM SERVICE" />
+      <ServiceLink href="https://t.me/agclub" imgSrc={s2Img} label="OFFICIAL CHANNEL" />
+      <button type="button" className="service-close" onClick={onClose}>CLOSE</button>
+    </div>
+  </div>
+);
+
+const ServiceLink = ({ href, imgSrc, label }) => (
+  <a href={href} target="_blank" className="service-item" rel="noopener noreferrer">
+    <img src={imgSrc} alt={label} />
+    {label}
+    <span>GO</span>
+  </a>
+);
 
 export default Profile;
