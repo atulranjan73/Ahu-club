@@ -6,7 +6,7 @@
   font-family: sans-serif;
   padding: 30px;
   border-radius: 10px;
-  margin-top: calc(5% + 70px); /* Reduced margin-top for less spacing */
+  margin-top: calc(0px + 55px); /* Reduced margin-top for less spacing */
 }
 
 .wallet-header {

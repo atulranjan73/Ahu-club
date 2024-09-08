@@ -1,13 +1,11 @@
 import React from 'react';
-import me from '../assets/images/decimage.png';
 
 function Official() {
   return (
     <div>
       <h1>Official Page</h1>
       <p>This is the Official page content.</p>
-      <img src={me} alt="Banner" />
-
+      <img src="https://images.indianexpress.com/2021/10/Arvind-Trivedi-Ramayan-Raavan.jpg?w=640" alt="Banner" />
     </div>
   );
 }
